@@ -1,9 +1,12 @@
 import React from "react"
 import classes from "./Toolbar.module.css"
+import NavigationItems from "../NavigationItems/NavigationItems"
 
 const toolbar = (props) => (
     <header className={classes.Toolbar}>
-        <h2>this is where the navigation items will go</h2>
+        <nav>
+            <NavigationItems />
+        </nav>
     </header>
 )
 
