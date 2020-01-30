@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import Aux from "../Auxillary/Auxillary"
 import Toolbar from "../../Components/Navigation/Toolbar/Toolbar"
+import BugCreator from "../../Components/Bugs/BugCreator/BugCreator"
 
 class Layout extends Component {
 
@@ -11,7 +12,7 @@ class Layout extends Component {
             <Aux>
                 <Toolbar />
                 <h2>SideDrawer</h2>
-                <h2>Main Content</h2>
+                <BugCreator />
             </Aux>
         )
     }
