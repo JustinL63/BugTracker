@@ -4,28 +4,8 @@ import classes from "./BugCreator.module.css"
 class BugCreator extends Component {
     state = {
         bug: {
-            title: {
-                elementType: "input",
-                elementConfig: {
-                    type: "text",
-                    placeholder: "Please Name Your Bug"
-                },
-                value: "",
-                validation: {
-                    required: true
-                }
-            },
-            Description: {
-                elementType: "input",
-                elementConfig: {
-                    type: "text",
-                    placeholder: "Give a description of the problem"
-                },
-                value: "",
-                validation: {
-                    required: true
-                }
-            },
+            title: "",
+            description: "",
             assignedTo: {
                 elementType: "select",
                 elementConfig: {
@@ -34,22 +14,19 @@ class BugCreator extends Component {
                        {value: "john", displayValue: "John"}
                    ]
                 },
-                value: "",
-                validation: {
-                    required: true
-                }
+
             },
            
         }
     }
 
     onSubmitHandler = (event)=> {
-        this.setState({name: event.target.value})
-        console.log(this.state.name)
+       alert("A name was submitted " + this.state.value)
+       event.preventDefault()
     }
 
     onChangeHandler = (event) => {
-        this.setState({name: event.target.value})
+        this.setState({value: event.target.value})
 
     }
 
@@ -58,10 +35,18 @@ class BugCreator extends Component {
             <div className={classes.BugCreator}>
                 <form>
                     <label>Title of Bug</label>
-                        <input type="text" name="title" placeholder="title" onChange={this.onChangeHandler}></input>
+                        <input 
+                            type="text" 
+                            name="title" placeholder="title"
+                            value={this.state.value} 
+                            onChange={this.onChangeHandler}></input>
                         <br/>
                     <label>Description of Bug</label>
-                        <input type="textarea" name="description" placeholder="description" onChange={this.onChangeHandler}></input>
+                        <textarea type="text" 
+                            name="description" 
+                            placeholder="description"
+                            value={this.state.value} 
+                            onChange={this.onChangeHandler}></textarea>
                         <br/>
                     <label>Assigned To</label>
                         <select>
