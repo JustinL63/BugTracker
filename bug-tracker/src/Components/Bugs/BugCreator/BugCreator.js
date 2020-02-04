@@ -1,11 +1,12 @@
 import React from "react"
 import classes from "./BugCreator.module.css"
 import { useForm } from "react-hook-form"
+import axios from "../../../Axios-Instance"
 
 const BugCreator = (props) => {
 
     const { register, handleSubmit } = useForm()
-    const onSubmit = data => console.log(data)
+    const onSubmit = data => axios.post("/bugs.json", data)
 
     return (
         <div className={classes.BugCreator}>
@@ -15,6 +16,7 @@ const BugCreator = (props) => {
                     <br/>
                 <label>Description</label>
                     <textarea type="text" placeholder="Title" name="description" ref={register} />
+                    <br/>
                 <label>Assigned To:</label>
                     <select name="assignedTo" ref={register}>
                         <option value="Tom">Tom</option>
@@ -22,7 +24,7 @@ const BugCreator = (props) => {
                         <option value="Harry">Harry</option>
                     </select>
                     <br/>
-                <input type="submit" />
+                <button onClick={onSubmit}>Submit that effing bug!!</button>
             </form>
         </div>
     )
