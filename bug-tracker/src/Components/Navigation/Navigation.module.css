@@ -1,0 +1,10 @@
+.NavBar {
+    width: 100%;
+    background-color: cadetblue;
+    color: black;
+
+}
+
+.NavigationItem {
+    float: right;
+}
