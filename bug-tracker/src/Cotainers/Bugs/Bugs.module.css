@@ -1,3 +1,42 @@
 .Bug {
-    float: none;
+    margin: auto;
+    border: 25px black;
+    background-color: burlywood;
+    height: 500px;
+    width: 75%;
+}
+
+.Bug form {
+    margin: auto;
+    height: 60%;
+    width: 60%;
+    overflow: auto;
+    background-color: chartreuse;
+    
+}
+
+.Bug label {
+    margin: 5px;
+    padding: 10px;
+    text-align: right;
+    border: 9px black;
+    color: orange;
+    background-color: blue;
+    
+}
+
+.Bug input {
+    margin: 5px;
+    padding: 10px;
+    background-color: orchid;
+    float: right;
+    color: palegreen;
+}
+
+.Bug textarea {
+    height: 65%;
+    float: right;
+    margin: 5px;
+    padding: 10px;
+  
 }

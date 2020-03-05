@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import Layout from './Components/HOC/Layout'
+import Bugs from '../src/Cotainers/Bugs/Bugs'
 
 
 class App extends Component {
   render() {
     return (
       <div>
-       <Layout/>
+       <Bugs/>
       </div>
     );
   }

@@ -1,17 +1,15 @@
 import React from 'react'
-import NavBar from '../Navigation/NavBar'
-import Login from '../../Cotainers/Login/Login'
-import Register from '../../Cotainers/Register/Register'
+import Login from '../../Components/Login/Login'
+import classes from './Layout.module.css'
+import Modal from '../UI/Modal/Modal'
 import Bugs from '../../Cotainers/Bugs/Bugs'
 
 const Layout = (props) => {
     return (
-        <div>
-            <NavBar/>    
-      <br/>
-        <Register />
-        <Login />
-        <br/>
+      <div className={classes.Layout}>
+        <Modal show={props.isLoggedIn}>
+          <Login/>
+        </Modal>
         <Bugs/>
       </div>
     )

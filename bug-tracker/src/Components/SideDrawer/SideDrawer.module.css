@@ -1,5 +1,9 @@
 .SideDrawer {
+    margin: 15px;
+    height: 90px;
+    border: 15px black;
     float: left;
     width: 15%;
     color: black;
+    background-color: chartreuse;
 }

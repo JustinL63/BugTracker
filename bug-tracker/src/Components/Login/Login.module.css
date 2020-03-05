@@ -1,0 +1,29 @@
+.Login {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.LoginForm {
+    margin-top: 35px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.LoginForm input {
+    padding: 5px;
+    width: 150px;
+    align-items: flex-start;
+}
+
+.LoginForm label {
+    width: 150px;
+    align-items: flex-end;
+}
+
+.LoginForm button {
+    width: 75px;
+    margin-top: 15px;
+}
