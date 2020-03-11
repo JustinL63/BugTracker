@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
-import Bugs from '../src/Cotainers/Bugs/Bugs'
+import {BrowserRouter} from 'react-router-dom'
+import NavBar from './Components/Layout/Navbar'
 
 
 class App extends Component {
   render() {
     return (
-      <div>
-       <Bugs/>
-      </div>
+      <BrowserRouter>
+        <div>
+          <NavBar/>
+          <h1>Tutorial Project</h1>
+        </div>
+      </BrowserRouter>   
     );
   }
- 
 }
 
 export default App;
